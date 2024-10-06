@@ -3,11 +3,11 @@ import './Sign.css'; // External CSS
 
 const Sign = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phoneNumber: '',
-    password: ''
+    firstName: 'John',         // Default First Name
+    lastName: 'Doe',           // Default Last Name
+    email: 'johndoe123@email.com', // Default Email
+    phoneNumber: '9988776655',  // Default Phone Number
+    password: 'john1234'        // Default Password
   });
 
   const [errors, setErrors] = useState({});
