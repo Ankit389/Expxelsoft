@@ -1,85 +1,177 @@
 /* Main container */
 .social-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: white;
-  }
-  
-  /* Title */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+/* Title */
+.main-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 18px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Content container layout */
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 20px;
+}
+
+/* Left Section */
+.left-section {
+  flex: 1 1 48%; /* Make sections responsive with flex-grow, flex-shrink, and flex-basis */
+  box-sizing: border-box;
+}
+
+/* Text Block */
+.text-block {
+  margin-bottom: 20px;
+}
+
+.text-block h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #222;
+}
+
+.text-block p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Right Section */
+.right-section {
+  flex: 1 1 48%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.right-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Floating avatars */
+.floating-avatars {
+  position: absolute;
+  bottom: -20px;
+  left: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #3498db;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
   .main-title {
-    font-size: 32px;
-    font-weight: bold;
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
+    font-size: 28px;
   }
-  
-  /* Subtitle */
+
   .subtitle {
-    font-size: 18px;
-    color: #666;
-    text-align: center;
-    margin-bottom: 40px;
+    font-size: 16px;
   }
-  
-  /* Content container layout */
+
   .content-container {
-    display: flex;
-    justify-content: space-between;
+    gap: 15px;
   }
-  
-  /* Left Section */
-  .left-section {
-    width: 50%;
+
+  .text-block h2 {
+    font-size: 22px;
   }
-  
-  .text-block {
+
+  .text-block p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column; /* Stack sections vertically on smaller screens */
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%; /* Full width for each section */
+    flex: 1 1 100%;
+  }
+
+  .main-title {
+    font-size: 26px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+
+  .text-block h2 {
+    font-size: 20px;
+  }
+
+  .text-block p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-container {
+    padding: 15px;
+  }
+
+  .main-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .subtitle {
+    font-size: 14px;
     margin-bottom: 20px;
   }
-  
+
   .text-block h2 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #222;
-  }
-  
-  .text-block p {
-    font-size: 16px;
-    color: #666;
-  }
-  
-  /* Right Section */
-  .right-section {
-    width: 50%;
-    position: relative;
-  }
-  
-  .right-image {
-    width: 100%;
-    border-radius: 10px;
-  }
-  
-  /* Floating avatars */
-  .floating-avatars {
-    position: absolute;
-    bottom: -20px;
-    left: 20px;
-    display: flex;
-    gap: 10px;
-  }
-  
-  .avatar {
-    width: 40px;
-    height: 40px;
-    background-color: #3498db;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 18px;
-    font-weight: bold;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   }
-  
+
+  .text-block p {
+    font-size: 13px;
+  }
+
+  .floating-avatars {
+    bottom: -15px;
+    left: 15px;
+  }
+
+  .avatar {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+}

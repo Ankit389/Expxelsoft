@@ -1,0 +1,73 @@
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white; /* Navbar color set to black */
+    padding: 15px 20px;
+  }
+  
+  .logo {
+    /* Centering the logo */
+  }
+  
+  .logo-image {
+    width: 40px; /* Set the width of the logo image */
+    height: auto; /* Maintain the aspect ratio */
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Space between links */
+  }
+  
+  .nav-links li {
+    margin: 0; /* Reset default margin */
+  }
+  
+  .nav-links a {
+    color: black; /* Link color */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  .sign-button {
+    padding: 10px 15px;
+    background-color: #007bff; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .sign-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column; /* Stack items vertically */
+      align-items: flex-start; /* Align to the left */
+    }
+  
+    .nav-links {
+      flex-direction: column; /* Stack links vertically */
+      width: 100%; /* Full width for mobile */
+      padding: 10px 0; /* Add padding for better touch targets */
+    }
+  
+    .nav-links li {
+      margin: 10px 0; /* Space between links */
+    }
+  
+    .sign-button {
+      margin-top: 10px; /* Space above the button */
+      width: 100%; /* Full width for mobile */
+    }
+  }
+  

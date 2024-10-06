@@ -1,0 +1,152 @@
+/* General footer styling */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Logo styling */
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 70px; /* Reduced logo size */
+    height: auto;
+}
+
+/* Footer links styling */
+.footer-links {
+    display: flex;
+    gap: 60px; /* Increased gap between columns */
+    flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+}
+
+.footer-column h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 5px;
+}
+
+/* Register and login buttons styling */
+.footer-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-register, .btn-login {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-register {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-login {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Bottom bar styling */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-social span {
+    margin-right: 10px;
+}
+
+.social-icon {
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #007bff;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-links {
+        gap: 40px; /* Reduce gap on smaller screens */
+    }
+
+    .footer-buttons {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-register, .btn-login {
+        width: 100%; /* Full width buttons on smaller screens */
+        text-align: center;
+    }
+
+    .footer-links {
+        gap: 20px; /* Further reduce gap for very small screens */
+    }
+
+    .footer-social {
+        justify-content: center;
+        gap: 15px;
+    }
+}
